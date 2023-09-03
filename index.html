@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="./index.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <link rel="stylesheet" href="./styles.css">
+
+<body class=" d-flex flex-column min-vh-100 bg-black">
+  <div class="content">
+  <div class="container-fluid bg-light text-center pb-5">
+    <div class="row">
+      <div class="col">
+        <header>
+          <h1 class="display-1 text-success">Rick and Morty API</h1>
+          <div class="container">
+            <div class="input-group">
+              <input class="form-control form-control-lg" type="text" id="input" placeholder="Search">
+              <button class="btn btn-outline-secondary" onclick="ProcurarPerso()"><i class="bi bi-search"></i></button>
+            </div>
+          </div>
+          <img class="imagemPersonalizada" src="./fotos/RICK_MORTY_ICON-01.svg" alt="">
+        </header>
+      </div>
+    </div>
+  </div>
+  <main class="container text-center mt-1 ">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="d-flex flex-column align-items-center" id="character-list-1"></div>
+      </div>
+      <div class="col-md-3">
+        <div class="d-flex flex-column align-items-center" id="character-list-2"></div>
+      </div>
+      <div class="col-md-3">
+        <div class="d-flex flex-column align-items-center" id="character-list-3"></div>
+      </div>
+      <div class="col-md-3">
+        <div class="d-flex flex-column align-items-center" id="character-list-4"></div>
+      </div>
+    </div>
+    <div id="pagination" class="d-flex justify-content-between">
+      <button class="btn btn-success text-info" id="return-button" onclick="retornar()">Previous</button>
+      <button class="btn btn-success text-info" id="next-button" onclick="proximo()">Next</button>
+    </div>
+    <div class="modal " id="characterModal" tabindex="-1" aria-labelledby="characterModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title text-success" id="characterModalLabel">Character Details</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body bg-info">
+            <img src="" alt="Imagem do Personagem" id="modal-character-image" class="img-fluid">
+            <h2 class="text-success" id="modal-character-name">Character's Name</h2>
+            <p class="text-success">Status: <span id="modal-character-status"></span></p>
+            <p class="text-success">Species: <span id="modal-character-species"></span></p>
+            <p class="text-success">last Known Location: <span id="modal-character-location"></span></p>
+            <p class="text-success">last Known Episode: <span id="modal-character-episode"></span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</div>
+  <footer class="bg-dark text-light text-center py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <p class="text-success">CHARACTERS: <span class="text-light">826</span></p>
+        </div>
+        <div class="col-md-4">
+          <p class="text-success">LOCATIONS: <span class="text-light">126</span></p>
+        </div>
+        <div class="col-md-4">
+          <p class="text-success">EPISODES: <span class="text-light">51</span></p>
+        </div>
+        <div class="col-md-12">
+          <p class="text-success">DEVELOPED BY <span class="text-light">Roque Junior Da Silva Moraes</span> IN 2023</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
+</html>
